@@ -1,0 +1,15 @@
+.file-input-container {
+  background-color: #efefef;
+  border: 1px dashed lightgray;
+  border-radius: 4px;
+
+  .btn-primary {
+    background-color: #ee5931;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}

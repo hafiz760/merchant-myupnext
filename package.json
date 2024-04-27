@@ -3,6 +3,9 @@
   "homepage": "http://dashbyte-react.themepixels.me",
   "version": "1.0.2",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@fullcalendar/core": "^6.1.4",
     "@fullcalendar/daygrid": "^6.1.4",

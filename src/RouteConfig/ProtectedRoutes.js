@@ -8,6 +8,7 @@ import AllCars from "../pages/AllCars";
 import AddCar from "../pages/AddCar";
 import AddHotel from "../pages/AddHotel";
 import AddEvent from "../pages/AddEvent";
+import ManageRooms from "../pages/ManageRooms";
 
 const ProtectedRoutes = () => {
   let routes = [
@@ -18,6 +19,7 @@ const ProtectedRoutes = () => {
     { path: "pages/AddCar", element: <AddCar /> },
     { path: "pages/AddHotel", element: <AddHotel /> },
     { path: "pages/AddEvent", element: <AddEvent /> },
+    { path: "hotel/:id/manage-rooms", element: <ManageRooms /> },
   ];
   return (
     <BrowserRouter>

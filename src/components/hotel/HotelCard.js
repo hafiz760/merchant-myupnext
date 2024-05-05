@@ -2,8 +2,10 @@ import React from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import EmptyImage from "../../assets/img/no-image.jpg";
+import { useNavigate } from "react-router-dom";
 
 function HotelCard({ data }) {
+  const navigate = useNavigate();
   return (
     <Card className="card-people mb-3">
       <Link to="">
@@ -24,7 +26,11 @@ function HotelCard({ data }) {
             <Button variant="outline-primary" className="w-100">
               Edit
             </Button>
-            <Button variant="outline-primary" className="w-100">
+            <Button
+              variant="outline-primary"
+              className="w-100"
+              onClick={() => navigate(`/hotel/${data?.id}/manage-rooms`)}
+            >
               Manage
             </Button>
           </div>

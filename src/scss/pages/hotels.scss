@@ -6,6 +6,14 @@
     color: white;
   }
 }
+.manage-room {
+  .status-label {
+    padding: 3px 10px;
+    border-radius: 50px;
+    background-color: #ee5931;
+    color: white;
+  }
+}
 
 .delete-icon {
   color: #ee5931;
@@ -55,4 +63,8 @@
 
 .react-datepicker-wrapper {
   width: 100% !important;
+}
+.dropdown-toggle::after
+{
+  display: none !important;
 }

@@ -1,12 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Col, Row } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import Footer from "../layouts/Footer";
 import Header from "../layouts/Header";
 import ManageRoomCard from "../components/hotel/ManageRoomCard";
 import CustomNotFound from "../components/shared/CustomNotFound";
+import AddRoomModal from "../components/hotel/AddRoomModal";
 export default function ManageRooms() {
   const Data = [1, 2, 3, 4, 5];
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <React.Fragment>
       <Header />
@@ -21,7 +27,16 @@ export default function ManageRooms() {
                 Id
               </li>
             </ol>
-            <h4 className="main-title mb-0">Manage Rooms</h4>
+            <Col className="d-flex align-items-center justify-content-between ">
+              <h4 className="main-title mb-0">Manage Rooms</h4>
+              <Button
+                variant="primary"
+                className="text-white"
+                onClick={handleShow}
+              >
+                Add Room
+              </Button>
+            </Col>
           </Col>
         </Col>
         <Row className="manage-room-container">
@@ -37,6 +52,12 @@ export default function ManageRooms() {
         </Row>
         <Footer />
       </Col>
+      <AddRoomModal
+        setShow={setShow}
+        show={show}
+        handleClose={handleClose}
+        handleShow={handleShow}
+      />
     </React.Fragment>
   );
 }
